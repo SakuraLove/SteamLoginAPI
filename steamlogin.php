@@ -27,7 +27,7 @@ if (isset($_GET['login'])) {
         } else {
             if ($openid->validate()) {
                 $id = $openid->identity;
-                $ptn = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+                $ptn = "/^https:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
                 preg_match($ptn, $id, $matches);
                 
                 $_SESSION['steamid'] = $matches[1];
